@@ -1,0 +1,737 @@
+@font-face {
+  font-family: SourceSansPro;
+  src: url(../fonts/SourceSansPro-Regular.otf);
+}
+@font-face {
+  font-family: SourceSansPro;
+  src: url(../fonts/SourceSansPro-Semibold.otf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: SourceSansPro;
+  src: url(../fonts/SourceSansPro-Bold.otf);
+  font-weight: 700;
+}
+:root {
+  --primary-color: #f6f8fd;
+  --secondary-color: #3B3C98;
+  --third-color: #8F8F8F;
+  --color-text: #2C2E33;
+}
+
+* {
+  font-family: SourceSansPro;
+  color: var(--color-text);
+}
+* ::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar {
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  transition: 0.3s ease;
+}
+.navbar.color-active {
+  background-color: #FFF;
+  box-shadow: 0 2px 2px 0 #d3d3d3;
+}
+.navbar .navbar-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--color-text);
+}
+.navbar .navbar-nav a.active {
+  color: var(--secondary-color);
+  font-weight: 700;
+  border-bottom: 2px solid var(--secondary-color);
+}
+.navbar .navbar-nav a:hover {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color) !important;
+  opacity: 1;
+}
+.navbar .auth {
+  display: flex;
+  gap: 15px;
+}
+.navbar .auth .btn-masuk {
+  padding: 10px 22px;
+  border-radius: 25px;
+  border: 2px solid var(--secondary-color);
+  background-color: transparent;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+.navbar .auth .btn-masuk:hover {
+  background-color: var(--secondary-color);
+  color: #FFF;
+  transition: 0.3s;
+}
+.navbar .auth .btn-daftar {
+  border: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  background-color: var(--secondary-color);
+  color: #FFF;
+  font-weight: 600;
+}
+.navbar .auth .btn-daftar:hover {
+  background-color: #24267c;
+  color: #FFF;
+  transition: 0.3s;
+}
+.navbar .auth .dropdown-item a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+.navbar .dropdown-toggle.nav-link {
+  color: var(--color-text);
+  font-weight: bold;
+}
+@media screen and (max-width: 992px) {
+  .navbar {
+    background-color: #FFF;
+    border-bottom: 2px solid rgba(59, 61, 152, 0.5411764706);
+  }
+  .navbar .btn-masuk, .navbar .btn-daftar {
+    width: 100%;
+  }
+  .navbar .auth {
+    margin-top: 50px;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .navbar .btn-masuk, .navbar .btn-daftar {
+    width: 100%;
+  }
+  .navbar .auth {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+footer {
+  width: 100%;
+  min-height: 30vh;
+}
+footer a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+@media screen and (max-width: 768px) {
+  footer .info, footer .menu, footer .alamat {
+    margin-bottom: 30px;
+  }
+}
+
+.auth-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-shadow {
+  box-shadow: 0 10px 41px rgba(0, 0, 0, 0.2);
+}
+
+.beranda header {
+  min-height: 90vh;
+  background: rgb(218, 216, 255);
+  background: linear-gradient(187deg, rgba(218, 216, 255, 0) 0%, rgb(227, 233, 255) 100%);
+}
+.beranda header img {
+  --animate-delay: 0.5s;
+}
+.beranda header h1 {
+  font-size: 60px;
+  --animate-delay: 0.9s;
+}
+.beranda header h4 {
+  color: var(--secondary-color);
+  --animate-delay: 0.7s;
+}
+.beranda header span {
+  color: var(--secondary-color);
+}
+.beranda header p {
+  color: var(--third-color);
+}
+.beranda header .btn-pesan {
+  padding: 12px 50px;
+  border-radius: 25px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: #FFF;
+  font-weight: 600;
+  box-shadow: 0 2px 10px 0 rgb(59, 60, 152);
+  --animate-delay: 1.5s;
+}
+.beranda header .btn-pesan:hover {
+  background-color: #24267c;
+  color: #FFF;
+  transition: 0.3s;
+}
+@media screen and (max-width: 992px) {
+  .beranda header {
+    padding-top: 150px;
+  }
+  .beranda header img {
+    margin: 100px auto;
+    width: 600px;
+    margin-left: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .beranda header h1 {
+    font-size: 50px;
+  }
+  .beranda header img {
+    margin: 100px auto;
+    width: 400px;
+    margin-left: 30px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .beranda header h1 {
+    font-size: 40px;
+  }
+  .beranda header img {
+    margin: 20px 0 100px 0;
+    width: 400px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .beranda header h1 {
+    font-size: 40px;
+  }
+  .beranda header h4 {
+    font-size: 20px;
+  }
+  .beranda header p {
+    font-size: 14px;
+  }
+  .beranda header img {
+    margin: 20px 0 100px 20px;
+    width: 300px;
+  }
+}
+.beranda .identity {
+  margin-top: -44px;
+  --animate-delay: 1.7s;
+}
+.beranda .identity h2 {
+  color: var(--secondary-color);
+}
+.beranda .identity p {
+  margin-bottom: 0;
+}
+.beranda .kenapa {
+  margin-top: -36px;
+  padding-bottom: 100px;
+  background-color: var(--primary-color);
+}
+.beranda .kenapa .card {
+  border: none;
+}
+.beranda .kenapa .card p {
+  color: var(--third-color);
+}
+.beranda .alur {
+  background-color: var(--primary-color);
+  padding-bottom: 100px;
+}
+.beranda .alur .content {
+  background-image: url("../../assets/images/line.png");
+  min-height: 500px;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.beranda .alur .content .buat-akun {
+  margin-top: 50px;
+  margin-left: 120px;
+}
+.beranda .alur .content .pilih-tanggal {
+  margin-top: 180px;
+  margin-left: 20px;
+}
+.beranda .alur .content .pilih-mobil {
+  margin-left: 80px;
+  margin-top: 230px;
+}
+.beranda .alur .content .pembayarans {
+  margin-top: -20px;
+  padding-left: 30px;
+}
+@media screen and (max-width: 1500px) {
+  .beranda .alur .content .pembayarans {
+    padding: 0;
+    margin: 0;
+    margin-top: -20px;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .beranda .alur .content .buat-akun {
+    padding: 0;
+    margin: 0;
+    margin-top: 90px;
+  }
+  .beranda .alur .content .pilih-tanggal {
+    padding: 0;
+    margin: 0;
+    margin-top: 120px;
+  }
+  .beranda .alur .content .pilih-mobil {
+    padding: 0;
+    margin: 0;
+    margin-top: 130px;
+  }
+  .beranda .alur .content .pembayarans {
+    padding: 0;
+    margin: 0;
+    margin-top: 180px;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .beranda .alur .content .buat-akun {
+    padding: 0;
+    margin: 0;
+    margin-top: 110px;
+  }
+  .beranda .alur .content .pilih-tanggal {
+    padding: 0;
+    margin: 0;
+    margin-top: 80px;
+  }
+  .beranda .alur .content .pilih-mobil {
+    padding: 0;
+    margin: 0;
+    margin-top: 180px;
+  }
+  .beranda .alur .content .pembayarans {
+    padding: 0;
+    margin: 0;
+    margin-top: 220px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .beranda .alur .content .buat-akun {
+    padding: 0;
+    margin: 0;
+    margin-top: 130px;
+  }
+  .beranda .alur .content .pilih-tanggal {
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
+  }
+  .beranda .alur .content .pilih-mobil {
+    padding: 0;
+    margin: 0;
+    margin-top: 140px;
+  }
+  .beranda .alur .content .pembayarans {
+    padding: 0;
+    margin: 0;
+    margin-top: 150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .beranda .alur .content {
+    background-image: none;
+  }
+  .beranda .alur .content .buat-akun {
+    padding: 0;
+    margin: 0;
+  }
+  .beranda .alur .content .pilih-tanggal {
+    padding: 0;
+    margin: 0;
+  }
+  .beranda .alur .content .pilih-mobil {
+    padding: 0;
+    margin: 0;
+  }
+  .beranda .alur .content .pembayarans {
+    padding: 0;
+    margin: 0;
+  }
+}
+.beranda .testimoni {
+  background-color: var(--primary-color);
+  padding-bottom: 100px;
+}
+.beranda .testimoni h4 {
+  font-size: 20px;
+}
+.beranda .testimoni p {
+  color: var(--third-color);
+  font-size: 18px;
+}
+.beranda .testimoni .star {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.beranda .testimoni .star i {
+  color: gold;
+}
+.beranda .testimoni .swiper {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 50px;
+}
+.beranda .testimoni .swiper-slide {
+  height: auto;
+  text-align: center;
+  padding: 15px 25px;
+  font-size: 18px;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(138, 138, 138, 0.25);
+  /* Center slide text vertically */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.beranda .testimoni .swiper-slide:active {
+  cursor: grabbing;
+}
+.beranda .testimoni .swiper-slide .nama {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-text);
+}
+.beranda .testimoni .swiper-slide .profesi {
+  color: var(--third-color);
+}
+.beranda .testimoni .swiper-slide:hover {
+  box-shadow: 0 5px 10px 0 rgba(59, 60, 152, 0.5);
+  background-color: var(--secondary-color);
+}
+.beranda .testimoni .swiper-slide:hover p {
+  color: #FFF;
+}
+.beranda .testimoni .swiper-slide.active {
+  box-shadow: 0 5px 10px 0 rgba(59, 60, 152, 0.5);
+  background-color: var(--secondary-color);
+}
+.beranda .testimoni .swiper-slide.active p {
+  color: #FFF;
+}
+
+.katalog-mobil {
+  padding-top: 150px;
+  background-color: var(--primary-color);
+}
+.katalog-mobil .filter {
+  padding: 35px;
+  background-color: #FFF;
+  border: none;
+  border-radius: 15px;
+}
+.katalog-mobil .filter .merek button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+.katalog-mobil .filter .merek .merek-mobil {
+  width: 50px;
+  margin: 4px;
+}
+.katalog-mobil .filter .merek .merek-mobil:hover {
+  animation: pulse;
+  animation-duration: 0.4s;
+}
+@media screen and (max-width: 992px) {
+  .katalog-mobil .filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+}
+.katalog-mobil .mobil {
+  border-radius: 10px;
+  min-height: 400px;
+  background-color: #FFF;
+  border: none;
+  transition: 0.5s;
+}
+.katalog-mobil .mobil:hover {
+  transform: scale(1.05, 1.05);
+}
+.katalog-mobil .mobil .rating i {
+  color: gold;
+  margin-bottom: 0;
+}
+.katalog-mobil .mobil .rating .testimoni {
+  margin-bottom: 0;
+  margin-left: 10px;
+  color: var(--third-color);
+}
+.katalog-mobil .mobil .spek p {
+  color: var(--third-color);
+}
+@media screen and (max-width: 1398px) {
+  .katalog-mobil .mobil {
+    min-height: 350px;
+  }
+  .katalog-mobil .mobil .gambar-mobil {
+    width: 220px;
+    height: 135px;
+  }
+  .katalog-mobil .mobil .spek img {
+    width: 35px;
+  }
+  .katalog-mobil .mobil .spek p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .katalog-mobil .mobil .gambar-mobil {
+    width: 260px;
+    height: 150px;
+  }
+  .katalog-mobil .mobil .spek img {
+    width: 45px;
+  }
+  .katalog-mobil .mobil .spek p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .katalog-mobil .mobil .gambar-mobil {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.ketentuan {
+  background-color: var(--primary-color);
+  padding-top: 150px;
+}
+@media screen and (max-width: 400px) {
+  .ketentuan h5 {
+    font-size: 16px;
+  }
+  .ketentuan li {
+    font-size: 14px;
+  }
+  .ketentuan .benefit {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.kontak {
+  padding-top: 200px;
+  background-color: var(--primary-color);
+}
+.kontak img {
+  width: 100%;
+}
+.kontak .form-kontak .form-control::-moz-placeholder {
+  color: var(--third-color);
+}
+.kontak .form-kontak .form-control::placeholder {
+  color: var(--third-color);
+}
+.kontak .form-kontak .btn-kirim {
+  border-radius: 10px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: #FFF;
+  font-weight: 600;
+  padding: 10px;
+}
+.kontak .form-kontak .btn-kirim:hover {
+  background-color: #24267c;
+  color: #FFF;
+  transition: 0.3s;
+}
+.kontak .form-kontak .btn-wa {
+  border-radius: 10px;
+  border: none;
+  background-color: #47C756;
+  color: #FFF;
+  font-weight: 600;
+  padding: 10px;
+}
+.kontak .form-kontak .btn-wa:hover {
+  background-color: #2dad3c;
+  color: #FFF;
+  transition: 0.3s;
+}
+@media screen and (max-width: 992px) {
+  .kontak {
+    padding-top: 150px;
+  }
+  .kontak img {
+    width: 600px;
+  }
+  .kontak .title {
+    margin-top: 50px;
+  }
+  .kontak form {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .kontak img {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 476px) {
+  .kontak img {
+    width: 360px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .kontak {
+    padding-top: 100px;
+  }
+  .kontak img {
+    width: 300px;
+  }
+}
+
+.data-diri {
+  background-color: var(--primary-color);
+  padding-top: 150px;
+  min-height: 100vh;
+}
+.data-diri .btn-lanjutkan {
+  background-color: var(--secondary-color);
+  padding: 10px 0;
+  color: #FFF;
+  font-weight: 600;
+  border: none;
+}
+.data-diri .btn-lanjutkan:hover {
+  background-color: #24267c;
+  color: #FFF;
+  transition: 0.3s;
+}
+
+.detail-pesanan p {
+  margin-bottom: 0;
+}
+
+.pembayaran {
+  background-color: var(--primary-color);
+  padding-top: 150px;
+  min-height: 100vh;
+}
+.pembayaran .btn-kirim {
+  background-color: var(--secondary-color);
+  padding: 10px 0;
+  color: #FFF;
+  font-weight: 600;
+  border: none;
+}
+.pembayaran .btn-kirim:hover {
+  background-color: #24267c;
+  color: #FFF;
+  transition: 0.3s;
+}
+
+.sukses {
+  background-color: var(--primary-color);
+}
+.sukses .btn-detailtransaksi {
+  background-color: var(--secondary-color);
+  padding: 10px 25px;
+  border-radius: 10px;
+  color: #FFF;
+  font-weight: 600;
+  border: none;
+}
+.sukses .btn-detailtransaksi:hover {
+  background-color: #24267c;
+  color: #FFF;
+  transition: 0.3s;
+}
+
+.riwayat-rental {
+  padding-top: 150px;
+  background-color: var(--primary-color);
+  min-height: 70vh;
+}
+
+.beri-review {
+  padding-top: 200px;
+  background-color: var(--primary-color);
+  min-height: 100vh;
+}
+.beri-review .gradient {
+  background-image: linear-gradient(to right, rgb(59, 60, 152), rgb(157, 163, 216));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.beri-review .star .fa-solid {
+  color: gold;
+}
+.beri-review .form-control::-moz-placeholder {
+  color: var(--third-color);
+}
+.beri-review .form-control::placeholder {
+  color: var(--third-color);
+}
+.beri-review .btn-kirim {
+  border-radius: 10px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: #FFF;
+  font-weight: 600;
+  padding: 10px;
+}
+.beri-review .btn-kirim:hover {
+  background-color: #24267c;
+  color: #FFF;
+  transition: 0.3s;
+}
+
+.edit-profile {
+  padding-top: 160px;
+  background-color: var(--primary-color);
+  min-height: 70vh;
+}
+.edit-profile .card {
+  border: 0;
+  background-color: #FFF;
+}
+.edit-profile .card .form-label {
+  font-weight: 600;
+}
+.edit-profile .card .form-control {
+  background-color: #FFF;
+  color: var(--third-color);
+}
+.edit-profile .card .form-control::-moz-placeholder {
+  color: var(--third-color);
+}
+.edit-profile .card .form-control::placeholder {
+  color: var(--third-color);
+}
+.edit-profile .card .btn-simpan {
+  background-color: var(--secondary-color);
+  border: 0;
+  padding: 10px 25px;
+  color: #FFF;
+  border-radius: 10px;
+  font-weight: 600;
+}/*# sourceMappingURL=main.css.map */
