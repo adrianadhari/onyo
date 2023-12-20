@@ -36,17 +36,17 @@ export default function Pembayaran() {
                     <p className="fw-semibold">Rincian Harga</p>
                     <table>
                       <tr>
-                        <td>Toyota Avanza</td>
-                        <td>Rp 250.000</td>
+                        <td>Toyota Innova Reborn</td>
+                        <td>Rp 500.000</td>
                       </tr>
                       <tr>
-                        <td>Biaya Layanan</td>
-                        <td>Rp 1000</td>
+                        <td>Biaya Driver</td>
+                        <td>Rp -</td>
                       </tr>
                       <hr />
                       <tr>
                         <td className="fw-semibold pe-5">Total Harga</td>
-                        <td>Rp 251.000</td>
+                        <td>Rp 500.000</td>
                       </tr>
                     </table>
                   </div>

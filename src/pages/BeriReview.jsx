@@ -2,8 +2,10 @@ import { useState } from "react";
 import FooterComponent from "../components/FooterComponent";
 import NavbarComponent from "../components/NavbarComponent";
 import { Container, Row, Col, Form } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 export default function BeriReview() {
+  let navigate = useNavigate();
   const [rating, setRating] = useState(0);
   const handleStarClick = (selectedRating) => {
     setRating(selectedRating);
@@ -44,7 +46,12 @@ export default function BeriReview() {
                   placeholder="Isi review berupa kesan dan pesan anda setelah memakai jasa rental ONYO..."
                   className="shadow-sm border-0 p-3"
                 />
-                <button className="btn-kirim w-100 mt-4">Kirim</button>
+                <button
+                  className="btn-kirim w-100 mt-4"
+                  onClick={() => navigate("/")}
+                >
+                  Kirim
+                </button>
               </div>
             </Col>
           </Row>

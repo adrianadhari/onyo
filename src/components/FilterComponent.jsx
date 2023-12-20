@@ -23,7 +23,7 @@ export default function FilterComponent() {
             <Form.Check type={"checkbox"} id={4} label="Hatchback" />
           </div>
           <div className="mb-2">
-            <Form.Check type={"checkbox"} id={5} label="MPV" />
+            <Form.Check type={"checkbox"} id={5} label="LCGC" />
           </div>
         </Form>
       </div>

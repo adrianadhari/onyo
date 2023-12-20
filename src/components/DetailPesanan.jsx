@@ -4,9 +4,9 @@ export default function DetailPesanan() {
   return (
     <>
       <div className="detail-pesanan p-4 bg-white shadow-sm rounded-2">
-        <h5 className="fw-bold">Rental Mobil Dengan Sopir</h5>
+        <h5 className="fw-bold">Rental Mobil Dengan Lepas Kunci</h5>
         <div className="mobil mb-3">
-          <p className="fw-semibold">Toyota Avanza</p>
+          <p className="fw-semibold">Toyota Innova Reborn</p>
           <p>Manual</p>
         </div>
         <div className="kota mb-3">
@@ -15,11 +15,11 @@ export default function DetailPesanan() {
         </div>
         <div className="tanggal-mulai mb-3">
           <p className="fw-semibold">Tanggal & Waktu Mulai</p>
-          <p>Sabtu, 18 November 2023</p>
+          <p>Sabtu, 21 Desember 2023</p>
         </div>
         <div className="tanggal-selesai mb-3">
           <p className="fw-semibold">Tanggal & Waktu Mulai</p>
-          <p>Senin, 20 November 2023</p>
+          <p>Senin, 23 Desember 2023</p>
         </div>
         <div className="lokasi-selesai mb-3">
           <p className="fw-semibold">Lokasi Selesai</p>

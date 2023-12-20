@@ -20,7 +20,11 @@ export default function DataDiri() {
                     <Col>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Nama Lengkap</Form.Label>
-                        <Form.Control type="text" required />
+                        <Form.Control
+                          type="text"
+                          required
+                          value="Adrian Adhari"
+                        />
                         <Form.Text className="text-muted">
                           (tanpa gelar dan tanda baca)
                         </Form.Text>
@@ -31,7 +35,11 @@ export default function DataDiri() {
                     <Col md={6}>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>No Telepon</Form.Label>
-                        <Form.Control type="text" required />
+                        <Form.Control
+                          type="text"
+                          required
+                          value="08419750939"
+                        />
                         <Form.Text className="text-muted">
                           Contoh: +628381920523
                         </Form.Text>
@@ -40,7 +48,11 @@ export default function DataDiri() {
                     <Col md={6}>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email</Form.Label>
-                        <Form.Control type="email" required />
+                        <Form.Control
+                          type="email"
+                          required
+                          value="user@gmail.com"
+                        />
                         <Form.Text className="text-muted">
                           Contoh: onyo@gmail.com
                         </Form.Text>
